@@ -8,8 +8,8 @@ resource "azurerm_virtual_network" "myvnet"{
 }
 
 resource "azurerm_subnet" "subnet"{
-  name                = var.subnet
-  resource_group_name = data.azurerm_resource_group.rg.name
-  location            = data.azurerm_resource_group.rg.location
-  address_prefix      = var.address_prefix
+  name                 = var.subnet
+  resource_group_name  = data.azurerm_resource_group.rg.name
+  virtual_network_name = data.azurerm_virtual_network.myvnet.name
+  address_prefix       = var.address_prefix
 }
