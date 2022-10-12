@@ -13,3 +13,4 @@ resource "azurerm_subnet" "subnet"{
   virtual_network_name = data.azurerm_virtual_network.myvnet.name
   address_prefix       = var.address_prefix
 }
+
