@@ -11,8 +11,12 @@ output "az_subnet_name" {
   value       = azurerm_subnet.subnet.name
 }
 output "az_subnet_vnet" {
-  description = "Subnet ID of the newly created subnet"
-  value       = azurerm_subnet.subnet.id
+  description = "Name of the virtual network associate with newly created subnet"
+  value       = azurerm_subnet.subnet.virtual_network_name
+}
+output "az_subnet_resource_group" {
+  description = "Name of the resource group in which the newly created subnet is created"
+  value       = azurerm_subnet.subnet.resource_group_name
 }
 
 
